@@ -578,10 +578,10 @@ public class Parser  {
 		writer.write("-Nombre moyen d'attributs par classe : " + nbAtributesClassAvg + " sur " + getnbAttributs() + "attributs."+ "\n");
 
 		writer.write("-Nombre total de parametres : " + getMaxParametre()+ "\n");
-		writer.write("-10% des classes ayant le plus de methodes : " + getMethodPercent(10)+ "\n");
-		writer.write("-10% des classes ayant le plus d'attributs : " + getPercentAttribut(10)+ "\n");
-		writer.write("-10% des classes ayant le plus de methodes et d'attributs : " + getpercentAttributMethod(10)+ "\n");
-		writer.write("-10% des classes ayant le plus de ligne de code : " + getpercentCodeLine(10)+ "\n");
+		writer.write("-10% des classes ayant le plus de methodes : " + getMethodPercent(50)+ "\n");
+		writer.write("-10% des classes ayant le plus d'attributs : " + getPercentAttribut(50)+ "\n");
+		writer.write("-10% des classes ayant le plus de methodes et d'attributs : " + getpercentAttributMethod(50)+ "\n");
+		writer.write("-10% des classes ayant le plus de ligne de code : " + getpercentCodeLine(50)+ "\n");
 		int value = 50;
 		writer.write("-Classes ayant le plus de " + value + " methodes : " + getLimitMethod(value) + "\n");
 
