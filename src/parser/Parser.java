@@ -80,7 +80,6 @@ public class Parser  {
 			newClasse.setClasse_Pairing(ClassPairing(parse));
 			newClasse.setAttributes(printVariables (parse));
 			newClasse.setFields(fieldacces(parse));
-			//System.out.println(newClasse.toString());
 			
 			ClassesList.add(newClasse); 
 		}
@@ -387,7 +386,7 @@ public class Parser  {
 		return Attributs;
 	}
 
-	public static ArrayList<Classe> getMethodPercent(int percent) {
+	public static ArrayList<String> getMethodPercent(int percent) {
 
 		Collections.sort(ClassesList, new Comparator<Classe>() {
 			@Override
@@ -396,15 +395,15 @@ public class Parser  {
 			}
 		});
 
-		ArrayList<Classe> list = new ArrayList<Classe> ();
+		ArrayList<String> list = new ArrayList<String> ();
 		int limitClass = (ClassesList.size()*percent)/100 ;	
 		for (int i = 0; i < limitClass; i++) {
-			list.add(ClassesList.get(i));
+			list.add(ClassesList.get(i).getName());
 		}	
 		return list;	
 	}
 
-	public static ArrayList<Classe> getPercentAttribut(int percent) {
+	public static ArrayList<String> getPercentAttribut(int percent) {
 
 		Collections.sort(ClassesList, new Comparator<Classe>() {
 			@Override
@@ -413,15 +412,15 @@ public class Parser  {
 			}
 		});
 
-		ArrayList<Classe> list = new ArrayList<Classe> ();
+		ArrayList<String> list = new ArrayList<String> ();
 		int limitClass = (ClassesList.size()*percent)/100 ;	
 		for (int i = 0; i < limitClass; i++) {
-			list.add(ClassesList.get(i));
+			list.add(ClassesList.get(i).getName());
 		}	
 		return list;	
 	}
 
-	public static ArrayList<Classe> getpercentAttributMethod(int percent) {
+	public static ArrayList<String> getpercentAttributMethod(int percent) {
 
 		Collections.sort(ClassesList, new Comparator<Classe>() {
 			@Override
@@ -430,27 +429,27 @@ public class Parser  {
 			}
 		});
 
-		ArrayList<Classe> list = new ArrayList<Classe> ();
+		ArrayList<String> list = new ArrayList<String> ();
 		int limitClass = (ClassesList.size()*percent)/100 ;	
 		for (int i = 0; i < limitClass; i++) {
-			list.add(ClassesList.get(i));
+			list.add(ClassesList.get(i).getName());
 		}	
 		return list;	
 	}
 
-	public static ArrayList<Classe> getLimitMethod(int limit) {
+	public static ArrayList<String> getLimitMethod(int limit) {
 
-		ArrayList<Classe> list = new ArrayList<Classe> ();
+		ArrayList<String> list = new ArrayList<String> ();
 		for (Classe c : ClassesList) {
 			if(c.getMethodes().size() >= limit) {
-				list.add(c);
+				list.add(c.getName());
 			}
 		}
 
 		return list;	
 	}
 
-	public static ArrayList<Classe> getpercentCodeLine(int percent) {
+	public static ArrayList<String> getpercentCodeLine(int percent) {
 
 		Collections.sort(ClassesList, new Comparator<Classe>() {
 			@Override
@@ -459,10 +458,10 @@ public class Parser  {
 			}
 		});
 
-		ArrayList<Classe> list = new ArrayList<Classe> ();
+		ArrayList<String> list = new ArrayList<String> ();
 		int limitClass = (ClassesList.size()*percent)/100 ;	
 		for (int i = 0; i < limitClass; i++) {
-			list.add(ClassesList.get(i));
+			list.add(ClassesList.get(i).getName());
 		}	
 		return list;	
 	}
@@ -577,12 +576,12 @@ public class Parser  {
 		float nbAtributesClassAvg = (float)getnbAttributs() / (float)ClassesList.size();
 		writer.write("-Nombre moyen d'attributs par classe : " + nbAtributesClassAvg + " sur " + getnbAttributs() + "attributs."+ "\n");
 
+		int value = 30;
 		writer.write("-Nombre total de parametres : " + getMaxParametre()+ "\n");
-		writer.write("-10% des classes ayant le plus de methodes : " + getMethodPercent(50)+ "\n");
-		writer.write("-10% des classes ayant le plus d'attributs : " + getPercentAttribut(50)+ "\n");
-		writer.write("-10% des classes ayant le plus de methodes et d'attributs : " + getpercentAttributMethod(50)+ "\n");
-		writer.write("-10% des classes ayant le plus de ligne de code : " + getpercentCodeLine(50)+ "\n");
-		int value = 50;
+		writer.write("-10% des classes ayant le plus de methodes : " + getMethodPercent(value)+ "\n");
+		writer.write("-10% des classes ayant le plus d'attributs : " + getPercentAttribut(value)+ "\n");
+		writer.write("-10% des classes ayant le plus de methodes et d'attributs : " + getpercentAttributMethod(value)+ "\n");
+		writer.write("-10% des classes ayant le plus de ligne de code : " + getpercentCodeLine(value)+ "\n");
 		writer.write("-Classes ayant le plus de " + value + " methodes : " + getLimitMethod(value) + "\n");
 
 	writer.write("*************** Fin Questions ***************\n\n");

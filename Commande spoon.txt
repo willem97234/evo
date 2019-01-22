@@ -1,0 +1,1 @@
+ java -cp spoon-core-6.2.0-jar-with-dependencies.jar spoon.Launcher -i src\parser\Classe.java --gui --noclasspath
