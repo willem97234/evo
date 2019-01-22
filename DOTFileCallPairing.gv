@@ -1,0 +1,6 @@
+graph out { ChienDomestique -- PrintStream [label=2];
+ChienDeGuerre -- PrintStream [label=2];
+ChienDeGuerre -- ChienDeGuerre [label=2];
+main -- ChienDomestique [label=2];
+main -- ChienDeGuerre [label=4];
+}

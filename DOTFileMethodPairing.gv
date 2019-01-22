@@ -1,0 +1,8 @@
+graph out { faireLeBeau -- println [label=1];
+Aboyer -- println [label=1];
+ataquer -- println [label=1];
+Aboyer -- println [label=1];
+Aboyer -- Aboyer [label=1];
+main -- ataquer [label=1];
+main -- Aboyer [label=3];
+}

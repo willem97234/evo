@@ -1,0 +1,105 @@
+*************** Questions TP ***************
+
+-Nombre de classes : 6
+-Nombre de Packages: 1
+-Nombre de lignes: 72.0
+-Nombre de methodes: 17.0
+-Nombre moyen de methodes par classe : 2.8333333
+-Nombre moyen de methodes par classe : 4.2352943
+-Nombre moyen d'attributs par classe : 0.8333333 sur 5.0attributs.
+-Nombre total de parametres : 14
+-10% des classes ayant le plus de methodes : []
+-10% des classes ayant le plus d'attributs : []
+-10% des classes ayant le plus de methodes et d'attributs : []
+-10% des classes ayant le plus de ligne de code : []
+-Classes ayant le plus de 50 methodes : []
+*************** Fin Questions ***************
+
+*************** informations ***************
+
+[Classe [Package=Test,
+ attributes=[name, id],
+ methodes=[[name=Animal, method_Invocation={}, returnType=null], [name=getName, method_Invocation={}, returnType=null], [name=setName, method_Invocation={}, returnType=null], [name=getId, method_Invocation={}, returnType=null], [name=setId, method_Invocation={}, returnType=null]],
+ fields=[name1, id1, name, name2, id, id2],
+ nbMethodes=5,
+ name=Animal,
+ Classe_Pairing={},
+ Global_Classe_Pairing={ICGuerre=0.0, main=0.0, ChienDomestique=0.0, ChienDeGuerre=0.0, ICDomestique=0.0},
+ Local_Metric={},
+ nombreDeLignes=22,
+ nombreAppelTotal=0
+]
+
+
+, Classe [Package=Test,
+ attributes=[],
+ methodes=[[name=ChienDomestique, method_Invocation={}, returnType=null], [name=faireLeBeau, method_Invocation={println=1}, returnType=null], [name=Aboyer, method_Invocation={println=1}, returnType=null], [name=r, method_Invocation={}, returnType=null]],
+ fields=[name1, id1, name, name2, id, id2, name, id, a, name, id],
+ nbMethodes=4,
+ name=ChienDomestique,
+ Classe_Pairing={PrintStream=2},
+ Global_Classe_Pairing={Animal=0.0, ICGuerre=0.0, main=0.16666667, ChienDeGuerre=0.0, ICDomestique=0.0},
+ Local_Metric={PrintStream=1.0},
+ nombreDeLignes=15,
+ nombreAppelTotal=2
+]
+
+
+, Classe [Package=Test,
+ attributes=[a],
+ methodes=[[name=ChienDeGuerre, method_Invocation={}, returnType=null], [name=ataquer, method_Invocation={println=1}, returnType=null], [name=Aboyer, method_Invocation={println=1, Aboyer=1}, returnType=null]],
+ fields=[name1, id1, name, name2, id, id2, name, id, a],
+ nbMethodes=3,
+ name=ChienDeGuerre,
+ Classe_Pairing={PrintStream=2, ChienDeGuerre=2},
+ Global_Classe_Pairing={Animal=0.0, ICGuerre=0.0, main=0.33333334, ChienDomestique=0.0, ICDomestique=0.0},
+ Local_Metric={PrintStream=0.5, ChienDeGuerre=0.5},
+ nombreDeLignes=14,
+ nombreAppelTotal=4
+]
+
+
+, Classe [Package=Test,
+ attributes=[a1, a2],
+ methodes=[[name=main, method_Invocation={ataquer=1, Aboyer=3}, returnType=null]],
+ fields=[name1, id1, name, name2, id, id2, name, id, a, name, id, args, a1, a2],
+ nbMethodes=1,
+ name=main,
+ Classe_Pairing={ChienDomestique=2, ChienDeGuerre=4},
+ Global_Classe_Pairing={Animal=0.0, ICGuerre=0.0013503087, ChienDomestique=0.19444443, ChienDeGuerre=0.33333334, ICDomestique=0.016203703},
+ Local_Metric={ChienDomestique=0.33333334, ChienDeGuerre=0.6666667},
+ nombreDeLignes=11,
+ nombreAppelTotal=6
+]
+
+
+, Classe [Package=Test,
+ attributes=[],
+ methodes=[[name=faireLeBeau, method_Invocation={}, returnType=null], [name=Aboyer, method_Invocation={}, returnType=null]],
+ fields=[name1, id1, name, name2, id, id2, name, id, a, name, id],
+ nbMethodes=2,
+ name=ICDomestique,
+ Classe_Pairing={},
+ Global_Classe_Pairing={Animal=0.0, ICGuerre=0.0, main=0.0, ChienDomestique=0.0, ChienDeGuerre=0.0},
+ Local_Metric={},
+ nombreDeLignes=5,
+ nombreAppelTotal=0
+]
+
+
+, Classe [Package=Test,
+ attributes=[],
+ methodes=[[name=ataquer, method_Invocation={}, returnType=null], [name=Aboyer, method_Invocation={}, returnType=null]],
+ fields=[name1, id1, name, name2, id, id2, name, id, a, name, id],
+ nbMethodes=2,
+ name=ICGuerre,
+ Classe_Pairing={},
+ Global_Classe_Pairing={Animal=0.0, main=0.0, ChienDomestique=0.0, ChienDeGuerre=0.0, ICDomestique=0.0},
+ Local_Metric={},
+ nombreDeLignes=5,
+ nombreAppelTotal=0
+]
+
+
+]*************** Fin informations ***************
+
